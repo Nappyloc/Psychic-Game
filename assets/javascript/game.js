@@ -70,6 +70,8 @@ function checkYaChoice(input) {
   }
 }
 
+// Reset Funtion to clear userinput and reset guesses
+
 function reset() {
   GuessLeft = 10;
   UserInput = [];
