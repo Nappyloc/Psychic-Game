@@ -35,6 +35,13 @@ var GuessLeft = 10;
 var UserInput = [];
 var pcchoice;
 
+// Reset Funtion to clear userinput reset guesses and select the PC choice
+
+function reset() {
+  GuessLeft = 10;
+  UserInput = [];
+  pcchoice = Guess[Math.floor(Math.random() * Guess.length)];
+}
 // Log and Update Values on Key Press
 document.onkeyup = function(event) {
   var keystroke = event.key;
@@ -76,13 +83,5 @@ function checkYaChoice(input) {
     document.getElementById("l").innerHTML = "Losses: " + Losses;
     document.getElementById("left").innerHTML = "Guesses Left:" + GuessLeft;
   }
-}
-
-// Reset Funtion to clear userinput and reset guesses
-
-function reset() {
-  GuessLeft = 10;
-  UserInput = [];
-  pcchoice = Guess[Math.floor(Math.random() * Guess.length)];
 }
 reset();
